@@ -1,5 +1,3 @@
-This is a library for the ST7789 IPS SPI display, is built on and requires the Adafruit_GFX library for Arduino.
-
 Arduino-ST7789-Library
 ======================
 
