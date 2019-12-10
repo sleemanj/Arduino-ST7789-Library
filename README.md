@@ -21,7 +21,7 @@ Connecting To Your Arduino
 
 The ST7789 is a 3.3 Volt Module, both power and signalling is 3.3v, so you can not connect it directly to a 5v Arduino, you will need to level-shift.
 
-** Remember do not connect to 5v Arduino directly, you must level shift or use a 3.3v Arduino **
+:warning: **Remember do not connect to 5v Arduino directly, you must level shift or use a 3.3v Arduino**
 
 ### Uno/Nano Connections
 
