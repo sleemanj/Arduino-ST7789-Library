@@ -1,11 +1,46 @@
-/***************************************************
-  This is a library for the ST7789 IPS SPI display.
-
-  Originally written by Limor Fried/Ladyada for 
-  Adafruit Industries.
-
-  Modified by Ananev Ilia
- ****************************************************/
+/*****************************************************************************
+ *
+ * The ST7789 IPS SPI display.is a 3.3v Device, do not use with a 5v Arduino 
+ *  unless you level shift. 
+ *
+ *       _____  _____  __     __    _ _          ___        _
+ *      |___ / |___ /  \ \   / /__ | | |_ ___   / _ \ _ __ | |_   _ 
+ *        |_ \   |_ \   \ \ / / _ \| | __/ __| | | | | '_ \| | | | |
+ *       ___) | ___) |   \ V / (_) | | |_\__ \ | |_| | | | | | |_| |
+ *      |____(_)____/     \_/ \___/|_|\__|___/  \___/|_| |_|_|\__, |
+ *                                                            |___/
+ *
+ *  Uno/Nano Connections
+ *  
+ *  Display          |    Arduino
+ *  -------------------------------------------
+ *  VCC              |    3.3v
+ *  GND              |    Gnd
+ *  SCL              |    Pin 13 (SCK)
+ *  SDA              |    Pin 11 (MOSI)
+ *  RES              |    Pin 9
+ *  DC               |    Pin 8
+ *  BLK              |    Leave disconnected
+ *
+ *  Mega Connections
+ *
+ *  Display          |    Arduino
+ *  -------------------------------------------
+ *  VCC              |    3.3v
+ *  GND              |    Gnd
+ *  SCL              |    Pin 52 (SCK)
+ *  SDA              |    Pin 51 (MOSI)
+ *  RES              |    Pin 9
+ *  DC               |    Pin 8
+ *  BLK              |    Leave disconnected
+ *
+ *
+ *
+ * Originally written by Limor Fried/Ladyada for 
+ * Adafruit Industries.
+ *
+ * Modified by Ananev Ilia
+ *****************************************************************************/
 
 #include <Adafruit_GFX.h>    // Core graphics library by Adafruit
 #include <Arduino_ST7789.h> // Hardware-specific library for ST7789 (with or without CS pin)
@@ -132,6 +167,7 @@ void testlines(uint16_t color) {
 
 void testdrawtext(char *text, uint16_t color) {
   tft.setCursor(0, 0);
+  tft.setTextSize(10);
   tft.setTextColor(color);
   tft.setTextWrap(true);
   tft.print(text);
