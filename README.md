@@ -28,8 +28,8 @@ The ST7789 is a 3.3 Volt Module, both power and signalling is 3.3v, so you can n
 ### Uno/Nano Connections
 
 | Display          |    Arduino | 
----------------------------------
-| VCC              |    3.3v | 
+-------------------| ------------- |
+| VCC              |    3.3v |
 | GND              |    Gnd| 
 | SCL              |    Pin 13 (SCK)| 
 | SDA              |    Pin 11 (MOSI) | 
@@ -40,7 +40,7 @@ The ST7789 is a 3.3 Volt Module, both power and signalling is 3.3v, so you can n
 ### Mega Connections
 
 | Display          |    Arduino | 
----------------------------------
+-------------------| -------------| 
 | VCC              |    3.3v | 
 | GND              |    Gnd| 
 | SCL              |    Pin 52 (SCK)| 
