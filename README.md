@@ -53,6 +53,16 @@ Usage
 
 Open the HelloWorld example.  as this library uses the Adafruit_GFX library as it's foundation you should google for more information about using the Adafruit_GFX library.
 
+Troubleshooting
+--------------------------
+
+### Level Translation
+
+The display seems quite sensitive to signal voltage, there are examples around on the internet which use a resistor-divider for level-shifting the signals, however you may find that this does not work (at all, or not reliably) if you are powering your Arduino from less than about 5.25v in my testing as the signal voltage is too low.  
+
+I would recommend using a more precise level-shifting method, such as 3.3v zener diodes with resistors, or the good old CD4050BE non-inverting buffer.
+
+
 Patches Welcome
 --------------------------
 
